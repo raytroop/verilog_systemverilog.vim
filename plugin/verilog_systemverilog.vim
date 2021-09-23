@@ -212,4 +212,5 @@ let g:verilog_syntax = {
                         \ }],
       \ }
 
-" vi: set expandtab softtabstop=4 shiftwidth=4:
+ " vi: set expandtab softtabstop=4 shiftwidth=4:
+set expandtab softtabstop=2 shiftwidth=2
