@@ -630,7 +630,7 @@ endfunction
 let s:verilog_syntax_fold=verilog_systemverilog#VariableGetValue("verilog_syntax_fold_lst")
 
 " Syntax priority list
-let s:verilog_syntax_order = []
+let s:verilog_syntax_order = ['statement']
 " let s:verilog_syntax_order = [
 "             \ 'baseCluster',
 "             \ 'statement',
@@ -806,7 +806,7 @@ if version >= 508 || !exists("did_verilog_syn_inits")
    HiLink verilogObject          Identifier
 
     HiLink verilogDataType         Type
-    HiLink uvm_class               Identifier
+    HiLink uvm_class               Type
     HiLink uvm_data                Identifier
     HiLink uvm_enum                Constant
     HiLink uvm_method              Statement
