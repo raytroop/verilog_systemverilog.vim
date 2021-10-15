@@ -197,7 +197,6 @@ syn keyword uvm_class    uvm_reg_backdoor
 syn keyword uvm_class    uvm_reg_block
 syn keyword uvm_class    uvm_reg_bus_op
 syn keyword uvm_class    uvm_reg_cbs
-syn keyword uvm_class    uvm_reg_data_t
 syn keyword uvm_class    uvm_reg_field
 syn keyword uvm_class    uvm_reg_item
 syn keyword uvm_class    uvm_reg_map
@@ -393,7 +392,6 @@ syn keyword uvm_method   uvm_agent
 syn keyword uvm_method   uvm_algorithmic_comparator
 syn keyword uvm_method   uvm_analysis_export
 syn keyword uvm_method   uvm_analysis_port
-syn keyword uvm_method   uvm_bitstream_t
 syn keyword uvm_method   uvm_callback
 syn keyword uvm_method   uvm_callback_iter
 syn keyword uvm_method   uvm_callbacks
@@ -407,11 +405,9 @@ syn keyword uvm_method   uvm_default_printer
 syn keyword uvm_method   uvm_default_table_printer
 syn keyword uvm_method   uvm_default_tree_printer
 syn keyword uvm_method   uvm_event_callback
-syn keyword uvm_method   uvm_integral_t
 syn keyword uvm_method   uvm_is_match
 syn keyword uvm_method   uvm_line_printer
 syn keyword uvm_method   uvm_objection_callback
-syn keyword uvm_method   uvm_objection_cbs_t
 syn keyword uvm_method   uvm_process_report_message
 syn keyword uvm_method   uvm_random_stimulus
 syn keyword uvm_method   uvm_report_error
@@ -421,7 +417,6 @@ syn keyword uvm_method   uvm_report_info
 syn keyword uvm_method   uvm_report_message
 syn keyword uvm_method   uvm_report_object
 syn keyword uvm_method   uvm_report_server
-syn keyword uvm_method   uvm_coreservice_t
 syn keyword uvm_method   uvm_report_warning
 syn keyword uvm_method   uvm_resource_db
 syn keyword uvm_method   uvm_root
@@ -552,6 +547,12 @@ syn match sv_directive "\`resetall"
 syn match sv_directive "\`timescale"
 syn match sv_directive "\`undef"
 syn match sv_directive "\`undefineall"
+
+syn keyword uvm_type   uvm_reg_data_t
+syn keyword uvm_type   uvm_bitstream_t
+syn keyword uvm_type   uvm_integral_t
+syn keyword uvm_type   uvm_objection_cbs_t
+syn keyword uvm_type   uvm_coreservice_t
 
 " Create syntax definition from g:verilog_syntax dictionary
 function! s:SyntaxCreate(name, verilog_syntax)
@@ -806,7 +807,7 @@ if version >= 508 || !exists("did_verilog_syn_inits")
 
     HiLink verilogDataType         Type
     HiLink uvm_class               Identifier
-    HiLink uvm_data                Type
+    HiLink uvm_data                Identifier
     HiLink uvm_enum                Constant
     HiLink uvm_method              Statement
     HiLink uvm_phase               Statement
@@ -814,6 +815,7 @@ if version >= 508 || !exists("did_verilog_syn_inits")
     HiLink uvm_macros              PreProc
     HiLink uvm_define              Constant
     HiLink sv_directive            PreProc
+    HiLink uvm_type                Type
 
    delcommand HiLink
 endif
