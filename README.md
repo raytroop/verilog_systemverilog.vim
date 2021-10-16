@@ -4,7 +4,8 @@
 
 ## About
 
-**support uvm highlighting**
+:ringed_planet:
+<span style="color: green;">Now support uvm highlighting</span>
 
 Based on script originally found at:
 

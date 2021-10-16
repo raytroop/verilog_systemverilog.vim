@@ -531,8 +531,6 @@ syn match uvm_macros   "\`uvm_sequence_library_utils"
 syn match uvm_macros   "\`uvm_warning"
 syn match uvm_macros   "\`uvm_warning_context"
 
-syn match uvm_define    "\v\`[0-9A-Z_]+"
-
 syn match sv_directive "\`celldefine"
 syn match sv_directive "\`default_nettype"
 syn match sv_directive "\`define"
@@ -630,34 +628,38 @@ endfunction
 let s:verilog_syntax_fold=verilog_systemverilog#VariableGetValue("verilog_syntax_fold_lst")
 
 " Syntax priority list
-let s:verilog_syntax_order = ['statement']
-" let s:verilog_syntax_order = [
-"             \ 'baseCluster',
-"             \ 'statement',
-"             \ 'assign',
-"             \ 'attribute',
-"             \ 'instance',
-"             \ 'prototype',
-"             \ 'class',
-"             \ 'clocking',
-"             \ 'covergroup',
-"             \ 'define',
-"             \ 'export',
-"             \ 'expression',
-"             \ 'function',
-"             \ 'interface',
-"             \ 'module',
-"             \ 'property',
-"             \ 'sequence',
-"             \ 'specify',
-"             \ 'task',
-"             \ 'typedef',
-"             \ ]
+" TURN OFF define, expression
+ let s:verilog_syntax_order = [
+             \ 'baseCluster',
+             \ 'statement',
+             \ 'assign',
+             \ 'attribute',
+             \ 'instance',
+             \ 'prototype',
+             \ 'class',
+             \ 'clocking',
+             \ 'covergroup',
+             \ 'define_OFF',
+             \ 'export',
+             \ 'expression_OFF',
+             \ 'function',
+             \ 'interface',
+             \ 'module',
+             \ 'property',
+             \ 'sequence',
+             \ 'specify',
+             \ 'task',
+             \ 'typedef',
+             \ ]
 
 " Generate syntax definitions for supported types
 for name in s:verilog_syntax_order
     call s:SyntaxCreate(name, g:verilog_syntax)
 endfor
+" matchgroup play the role of delimiter
+syn region verilogExpression matchgroup=verilogOperator start="(" end=")" skip="//.*" transparent contains=verilogDataType,verilogExpression,uvm_class,uvm_type
+" end label not highlight
+syn region sv_label start=":" end="\v[^;\[\]\(\)\<\>\{\}]$" transparent oneline contains=NONE
 
 if index(s:verilog_syntax_fold, "block_nested") >= 0 || index(s:verilog_syntax_fold, "block_named") >= 0
     if index(s:verilog_syntax_fold, "block_nested") >= 0
@@ -813,7 +815,6 @@ if version >= 508 || !exists("did_verilog_syn_inits")
     HiLink uvm_phase               Statement
     HiLink uvm_seq                 Type
     HiLink uvm_macros              PreProc
-    HiLink uvm_define              Constant
     HiLink sv_directive            PreProc
     HiLink uvm_type                Type
 
