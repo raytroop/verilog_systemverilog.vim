@@ -221,6 +221,7 @@ syn keyword uvm_class    uvm_tlm_generic_payload
 syn keyword uvm_class    uvm_tr_stream
 syn keyword uvm_class    uvm_transaction
 syn keyword uvm_class    uvm_scoreboard
+syn keyword uvm_class    uvm_callback
 
 syn keyword uvm_data     adaptor
 syn keyword uvm_data     analysis_export
@@ -395,7 +396,6 @@ syn keyword uvm_method   uvm_agent
 syn keyword uvm_method   uvm_algorithmic_comparator
 syn keyword uvm_method   uvm_analysis_export
 syn keyword uvm_method   uvm_analysis_port
-syn keyword uvm_method   uvm_callback
 syn keyword uvm_method   uvm_callback_iter
 syn keyword uvm_method   uvm_callbacks
 syn keyword uvm_method   uvm_callbacks_objection
