@@ -220,6 +220,7 @@ syn keyword uvm_class    uvm_tlm_fifo
 syn keyword uvm_class    uvm_tlm_generic_payload
 syn keyword uvm_class    uvm_tr_stream
 syn keyword uvm_class    uvm_transaction
+syn keyword uvm_class    uvm_scoreboard
 
 syn keyword uvm_data     adaptor
 syn keyword uvm_data     analysis_export
@@ -241,6 +242,7 @@ syn keyword uvm_data     seq_item_port
 syn keyword uvm_data     starting_phase
 syn keyword uvm_data     uvm_top
 syn keyword uvm_data     value
+syn keyword uvm_data     uvm_root
 
 syn keyword uvm_enum     UVM_ACTIVE
 syn keyword uvm_enum     UVM_ALL_ON
@@ -420,8 +422,6 @@ syn keyword uvm_method   uvm_report_object
 syn keyword uvm_method   uvm_report_server
 syn keyword uvm_method   uvm_report_warning
 syn keyword uvm_method   uvm_resource_db
-syn keyword uvm_method   uvm_root
-syn keyword uvm_method   uvm_scoreboard
 syn keyword uvm_method   uvm_seq_item_export
 syn keyword uvm_method   uvm_seq_item_port
 syn keyword uvm_method   uvm_seq_item_pull_export
