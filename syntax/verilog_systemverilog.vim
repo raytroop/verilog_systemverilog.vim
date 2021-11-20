@@ -552,6 +552,7 @@ syn keyword uvm_type   uvm_bitstream_t
 syn keyword uvm_type   uvm_integral_t
 syn keyword uvm_type   uvm_objection_cbs_t
 syn keyword uvm_type   uvm_coreservice_t
+syn keyword uvm_type   uvm_status_e
 
 " Create syntax definition from g:verilog_syntax dictionary
 function! s:SyntaxCreate(name, verilog_syntax)
