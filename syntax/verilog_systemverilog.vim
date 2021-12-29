@@ -35,7 +35,7 @@ syn keyword verilogStatement   config deassign defparam design
 syn keyword verilogStatement   disable edge endconfig
 syn keyword verilogStatement   endgenerate
 syn keyword verilogStatement   endprimitive endtable
-syn keyword verilogStatement   event force fork join
+syn keyword verilogStatement   event force fork join process
 syn keyword verilogStatement   join_any join_none forkjoin
 syn keyword verilogStatement   generate genvar highz0 highz1 ifnone
 syn keyword verilogStatement   incdir include initial

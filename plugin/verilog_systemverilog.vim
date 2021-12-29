@@ -120,12 +120,12 @@ let g:verilog_syntax = {
                         \ }],
       \ 'comment'     : [{
                         \ 'match'       : '//.*',
-                        \ 'syn_argument': 'contains=verilogTodo,verilogDirective,@Spell'
+                        \ 'syn_argument': 'contains=verilogTodo,@Spell'
                         \ },
                         \ {
                         \ 'match_start' : '/\*',
                         \ 'match_end'   : '\*/',
-                        \ 'syn_argument': 'contains=verilogTodo,verilogDirective,@Spell keepend extend'
+                        \ 'syn_argument': 'contains=verilogTodo,@Spell keepend extend'
                         \ }],
       \ 'covergroup'  : [{
                         \ 'match_start' : '\<covergroup\>',
