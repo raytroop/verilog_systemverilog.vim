@@ -29,10 +29,10 @@ syn sync lines=1000
 "       SystemVerilog Syntax
 "##########################################################
 
-syn keyword verilogStatement   always and assign buf
+syn keyword verilogStatement   always and assign automatic buf
 syn keyword verilogStatement   bufif0 bufif1 cell cmos
 syn keyword verilogStatement   config deassign defparam design
-syn keyword verilogStatement   disable edge endconfig chandle
+syn keyword verilogStatement   disable edge endconfig
 syn keyword verilogStatement   endgenerate
 syn keyword verilogStatement   endprimitive endtable
 syn keyword verilogStatement   event force fork join
@@ -640,28 +640,28 @@ let s:verilog_syntax_fold=verilog_systemverilog#VariableGetValue("verilog_syntax
 
 " Syntax priority list
 " TURN OFF define, expression
- let s:verilog_syntax_order = [
-             \ 'baseCluster',
-             \ 'statement',
-             \ 'assign',
-             \ 'attribute',
-             \ 'instance',
-             \ 'prototype',
-             \ 'class',
-             \ 'clocking',
-             \ 'covergroup',
-             \ 'define_OFF',
-             \ 'export',
-             \ 'expression_OFF',
-             \ 'function',
-             \ 'interface',
-             \ 'module',
-             \ 'property',
-             \ 'sequence',
-             \ 'specify',
-             \ 'task',
-             \ 'typedef',
-             \ ]
+let s:verilog_syntax_order = [
+            \ 'baseCluster',
+            \ 'statement',
+            \ 'assign',
+            \ 'attribute',
+            \ 'instance',
+            \ 'prototype',
+            \ 'class',
+            \ 'clocking',
+            \ 'covergroup',
+            \ 'define_OFF',
+            \ 'export',
+            \ 'expression_OFF',
+            \ 'function',
+            \ 'interface',
+            \ 'module',
+            \ 'property',
+            \ 'sequence',
+            \ 'specify',
+            \ 'task',
+            \ 'typedef',
+            \ ]
 
 " Generate syntax definitions for supported types
 for name in s:verilog_syntax_order
