@@ -237,6 +237,15 @@ syn keyword uvm_class    uvm_default_printer
 syn keyword uvm_class    uvm_default_table_printer
 syn keyword uvm_class    uvm_default_tree_printer
 syn keyword uvm_class    uvm_event_callback
+syn keyword uvm_class    uvm_root
+syn keyword uvm_class    uvm_report_server
+syn keyword uvm_class    uvm_default_factory
+syn keyword uvm_class    uvm_default_report_server
+syn keyword uvm_class    uvm_visitor
+syn keyword uvm_class    uvm_component_name_check_visitor
+syn keyword uvm_class    uvm_tr_database
+syn keyword uvm_class    uvm_default_coreservice_t
+
 
 syn keyword uvm_data     adaptor
 syn keyword uvm_data     analysis_export
@@ -258,7 +267,6 @@ syn keyword uvm_data     seq_item_port
 syn keyword uvm_data     starting_phase
 syn keyword uvm_data     uvm_top
 syn keyword uvm_data     value
-syn keyword uvm_data     uvm_root
 
 syn keyword uvm_enum     UVM_ACTIVE
 syn keyword uvm_enum     UVM_ALL_ON
@@ -423,7 +431,6 @@ syn keyword uvm_method   uvm_report_handler
 syn keyword uvm_method   uvm_report_info
 syn keyword uvm_method   uvm_report_message
 syn keyword uvm_method   uvm_report_object
-syn keyword uvm_method   uvm_report_server
 syn keyword uvm_method   uvm_report_warning
 syn keyword uvm_method   uvm_seq_item_export
 syn keyword uvm_method   uvm_seq_item_port
