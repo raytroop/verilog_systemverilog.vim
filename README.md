@@ -1,6 +1,6 @@
 # Vim Syntax Plugin for Verilog and SystemVerilog
 
-[![Build Status](https://travis-ci.org/vhda/verilog_systemverilog.vim.svg?branch=master)](https://travis-ci.org/vhda/verilog_systemverilog.vim)
+[![Build Status](https://github.com/vhda/verilog_systemverilog.vim/actions/workflows/verification-flow.yml/badge.svg?branch=master)](https://github.com/vhda/verilog_systemverilog.vim/actions/workflows/verification-flow.yml)
 
 ## About
 
@@ -77,8 +77,11 @@ __Note__: Proper SystemVerilog tag generation requires development version of
 To enable syntax folding set the following option:
 
 ```VimL
+let g:verilog_syntax_fold_lst = "all"
 set foldmethod=syntax
 ```
+
+For more information check the help page `:help veriog-fold`.
 
 ### Verilog Compilation and Error format
 
@@ -152,7 +155,7 @@ nnoremap <leader>u :VerilogGotoInstanceStart<CR>
 
 ## Installation
 
-### Using [vim-plug][P]
+### Using [vim-plug][pl]
 
 1. Add the following to your `vimrc`:
 
@@ -180,7 +183,7 @@ nnoremap <leader>u :VerilogGotoInstanceStart<CR>
    $ vim +PluginInstall +qall
    ```
 
-### Using [Pathogen][p]
+### Using [Pathogen][pa]
 
 ```Shell
 $ cd ~/.vim/bundle
@@ -242,11 +245,11 @@ page.
 
 [c]: https://github.com/universal-ctags/ctags
 [f]: https://github.com/Konfekt/FastFold
-[p]: https://github.com/tpope/vim-pathogen
+[pa]: https://github.com/tpope/vim-pathogen
 [v]: https://github.com/gmarik/vundle
-[P]: https://github.com/junegunn/vim-plug
+[pl]: https://github.com/junegunn/vim-plug
 [e]: https://ctags.io
-[t]: http://majutsushi.github.io/tagbar/
+[t]: https://github.com/preservim/tagbar
 [hl_matchit]:   https://github.com/vimtaku/hl_matchit.vim
 [supertab]:     https://github.com/ervandew/supertab
 [vim-omni]:     http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-X_CTRL-O

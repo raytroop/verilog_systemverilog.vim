@@ -170,9 +170,9 @@ class z;
 
     task while_block;
         while (1)
-        begin
-            do_something();
-        end
+            begin
+                do_something();
+            end
     endtask
 
     task while_block2;
@@ -636,23 +636,23 @@ module a import some_pkg::*;
 );
 
 always @ (posedge clk)
-begin
-end
+    begin
+    end
 
 always
     x <= 1;
 
 always
-begin
-    x <= 1;
-    statement();
-end
+    begin
+        x <= 1;
+        statement();
+    end
 
 always //
-begin
-    x <= 1;
-    statement();
-end
+    begin
+        x <= 1;
+        statement();
+    end
 
 label : always //
     x <= 1;
@@ -677,68 +677,68 @@ label : always_ff begin
 end
 
 always_ff @ (posedge clk)
-begin
-    x <= 1;
-    statement();
-    foreach (object[i])
+    begin
+        x <= 1;
         statement();
-end
+        foreach (object[i])
+            statement();
+    end
 
 always_ff @ (posedge clk)
-begin
-    x <= 1;
-    statement();
-    foreach (object[i])
+    begin
+        x <= 1;
         statement();
-end
+        foreach (object[i])
+            statement();
+    end
 
 always_ff @ (posedge clk)
-begin
-    x <= 1;
-    statement();
-    foreach (object[i])
+    begin
+        x <= 1;
         statement();
-end
+        foreach (object[i])
+            statement();
+    end
 
 always_ff @ (posedge clk)
-begin
-    x <= 1;
-    statement();
-    foreach (object[i])
+    begin
+        x <= 1;
         statement();
-end
+        foreach (object[i])
+            statement();
+    end
 
 always_ff @ (posedge clk)
-begin
-    x <= 1;
-    statement();
-    foreach (object[i])
+    begin
+        x <= 1;
         statement();
-end
+        foreach (object[i])
+            statement();
+    end
 
 always_ff @ (posedge clk)
-begin
-    x <= 1;
-    statement();
-    foreach (object[i])
+    begin
+        x <= 1;
         statement();
-end
+        foreach (object[i])
+            statement();
+    end
 
 always_ff @ (posedge clk)
-begin
-    x <= 1;
-    statement();
-    foreach (object[i])
+    begin
+        x <= 1;
         statement();
-end
+        foreach (object[i])
+            statement();
+    end
 
 always_ff @ (posedge clk)
-begin
-    x <= 1;
-    statement();
-    foreach (object[i])
+    begin
+        x <= 1;
         statement();
-end
+        foreach (object[i])
+            statement();
+    end
 
 // always_ff
 // begin
